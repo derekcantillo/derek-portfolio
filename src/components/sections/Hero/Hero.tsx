@@ -1,12 +1,17 @@
 import React from 'react'
 import { cn } from 'utils'
+import { Typography } from 'components/ui/Typography'
 
 export const Hero = () => {
 	return (
 		<section className={cn('flex min-h-screen items-center justify-center')}>
 			<div className={cn('container mx-auto px-4')}>
-				<h1 className={cn('text-4xl font-bold')}>Your Name</h1>
-				<p className={cn('mt-4 text-xl')}>Your Role or Tagline</p>
+				<Typography variant="h1" className="mb-4">
+					Your Name
+				</Typography>
+				<Typography variant="h3" font="clash" weight="light">
+					Your Role or Tagline
+				</Typography>
 			</div>
 		</section>
 	)

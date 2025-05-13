@@ -1,13 +1,18 @@
 import React from 'react'
 import { cn } from 'utils'
+import { Typography } from 'components/ui/Typography'
 
 export const About = () => {
 	return (
 		<section className={cn('py-20')}>
 			<div className={cn('container mx-auto px-4')}>
-				<h2 className={cn('mb-8 text-3xl font-bold')}>About Me</h2>
+				<Typography variant="h2" className="mb-8">
+					About Me
+				</Typography>
 				<div className={cn('prose max-w-none')}>
-					<p>Your about content will go here</p>
+					<Typography variant="p" size="lg">
+						Your about content will go here
+					</Typography>
 				</div>
 			</div>
 		</section>
