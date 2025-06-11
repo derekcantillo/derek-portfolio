@@ -35,7 +35,16 @@ export type TypographyWeight =
 	| 'black'
 
 export type TypographyFont =
+	// Clash Display variants
 	| 'clash'
+	| 'clash-extralight'
+	| 'clash-light'
+	| 'clash-regular'
+	| 'clash-medium'
+	| 'clash-semibold'
+	| 'clash-bold'
+	| 'clash-variable'
+	// League Gothic variants
 	| 'league'
 	| 'league-condensed'
 	| 'league-semicondensed'
