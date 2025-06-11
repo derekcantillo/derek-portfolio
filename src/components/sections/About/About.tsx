@@ -8,6 +8,28 @@ import {
 	HeartIcon
 } from '@heroicons/react/24/solid'
 
+const keyFacts = [
+	{
+		icon: ClockIcon,
+		title: '4+ Years Experience',
+		description:
+			'Professional experience in frontend development creating scalable solutions.',
+		color: 'primary'
+	},
+	{
+		icon: AcademicCapIcon,
+		title: 'Systems Engineer',
+		description: 'Universidad del Magdalena graduate with a solid foundation.',
+		color: 'secondary'
+	},
+	{
+		icon: HeartIcon,
+		title: 'UI/UX Enthusiast',
+		description: 'Passionate about creating beautiful, accessible interfaces.',
+		color: 'accent'
+	}
+]
+
 export const About = () => {
 	return (
 		<section
@@ -20,7 +42,11 @@ export const About = () => {
 				<div className="mx-auto mb-12 text-center">
 					<Typography variant="h2" className="relative inline-block">
 						About Me
-						<span className="from-primary to-secondary absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r"></span>
+						<span
+							className={cn(
+								'from-primary to-secondary absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r'
+							)}
+						/>
 					</Typography>
 				</div>
 
@@ -73,45 +99,29 @@ export const About = () => {
 
 					{/* Key Facts - Bottom row, first two columns */}
 					<div className="grid grid-cols-3 gap-4 md:col-span-2">
-						{/* Experience */}
-						<div className="border-primary/20 rounded-lg border-2 p-6 shadow-md">
-							<div className="bg-primary/40 text-primary mb-4 flex h-10 w-10 items-center justify-center">
-								<ClockIcon className="h-6 w-6" />
-							</div>
-							<Typography variant="h4" className="text-primary mb-2">
-								4+ Years Experience
-							</Typography>
-							<Typography variant="p">
-								Professional experience in frontend development creating
-								scalable solutions.
-							</Typography>
-						</div>
+						{keyFacts.map(fact => {
+							const IconComponent = fact.icon
+							const textColorClass = `text-${fact.color}`
+							const bgColorClass = `bg-${fact.color}/40`
+							const borderColorClass = `border-${fact.color}`
 
-						{/* Education */}
-						<div className="border-secondary/20 rounded-lg border-2 p-6 shadow-md">
-							<div className="bg-secondary/40 text-secondary mb-4 flex h-10 w-10 items-center justify-center">
-								<AcademicCapIcon className="h-6 w-6" />
-							</div>
-							<Typography variant="h4" className="text-secondary mb-2">
-								Systems Engineer
-							</Typography>
-							<Typography variant="p">
-								Universidad del Magdalena graduate with a solid foundation.
-							</Typography>
-						</div>
-
-						{/* Passion */}
-						<div className="border-accent rounded-lg border-2 p-6 shadow-md">
-							<div className="text-accent bg-accent/40 mb-4 flex h-10 w-10 items-center justify-center">
-								<HeartIcon className="h-6 w-6" />
-							</div>
-							<Typography variant="h4" className="text-accent mb-2">
-								UI/UX Enthusiast
-							</Typography>
-							<Typography variant="p">
-								Passionate about creating beautiful, accessible interfaces.
-							</Typography>
-						</div>
+							return (
+								<div
+									key={fact.title}
+									className={`rounded-lg border-2 ${borderColorClass} p-6 shadow-md`}
+								>
+									<div
+										className={`mb-4 flex h-10 w-10 items-center justify-center ${bgColorClass} ${textColorClass}`}
+									>
+										<IconComponent className="h-6 w-6" />
+									</div>
+									<Typography variant="h4" className={`mb-2 ${textColorClass}`}>
+										{fact.title}
+									</Typography>
+									<Typography variant="p">{fact.description}</Typography>
+								</div>
+							)
+						})}
 					</div>
 				</div>
 			</div>
