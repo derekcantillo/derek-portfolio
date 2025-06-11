@@ -74,9 +74,15 @@ export const Projects = () => {
 						} else {
 							widthClass = 'w-full md:w-1/3' // 1/3 width
 						}
+						if (projects.length % 2 !== 0 && index === projects.length - 1) {
+							widthClass = 'w-full'
+						}
 
 						return (
-							<div key={project.title} className={`${widthClass} h-96 p-3`}>
+							<div
+								key={project.title}
+								className={`${widthClass} h-[30rem] p-3`}
+							>
 								<div
 									className="group relative h-full w-full overflow-hidden rounded-lg"
 									style={{
