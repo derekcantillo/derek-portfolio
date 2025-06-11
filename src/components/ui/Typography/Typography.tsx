@@ -97,16 +97,39 @@ const fontWeightMap = {
 	black: '900'
 }
 
+// Color classes
+const colorClasses = {
+	light: 'text-light',
+	dark: 'text-dark',
+	accent: 'text-accent',
+	inherit: 'text-inherit'
+}
+
 const defaultVariantMapping = {
-	h1: { size: '6xl', weight: 'bold', font: 'league' },
-	h2: { size: '5xl', weight: 'bold', font: 'league' },
-	h3: { size: '4xl', weight: 'semibold', font: 'clash' },
-	h4: { size: '3xl', weight: 'semibold', font: 'clash' },
-	h5: { size: '2xl', weight: 'medium', font: 'clash' },
-	h6: { size: 'xl', weight: 'medium', font: 'clash' },
-	p: { size: 'base', weight: 'normal', font: 'clash-regular' },
-	span: { size: 'base', weight: 'normal', font: 'clash-regular' },
-	caption: { size: 'sm', weight: 'normal', font: 'clash-regular' }
+	h1: { size: '6xl', weight: 'bold', font: 'league', color: 'inherit' },
+	h2: { size: '5xl', weight: 'bold', font: 'league', color: 'inherit' },
+	h3: { size: '4xl', weight: 'semibold', font: 'clash', color: 'inherit' },
+	h4: { size: '3xl', weight: 'semibold', font: 'clash', color: 'inherit' },
+	h5: { size: '2xl', weight: 'medium', font: 'clash', color: 'inherit' },
+	h6: { size: 'xl', weight: 'medium', font: 'clash', color: 'inherit' },
+	p: {
+		size: 'base',
+		weight: 'normal',
+		font: 'clash-regular',
+		color: 'inherit'
+	},
+	span: {
+		size: 'base',
+		weight: 'normal',
+		font: 'clash-regular',
+		color: 'inherit'
+	},
+	caption: {
+		size: 'sm',
+		weight: 'normal',
+		font: 'clash-regular',
+		color: 'inherit'
+	}
 } as const
 
 export const Typography = ({
@@ -114,6 +137,7 @@ export const Typography = ({
 	size,
 	weight,
 	font,
+	color,
 	as,
 	className,
 	children,
@@ -124,23 +148,20 @@ export const Typography = ({
 
 	const finalSize = size ?? defaultStyles.size
 	const finalWeight = weight ?? defaultStyles.weight
-
-	// Para fuentes específicas de Clash o League, no necesitamos aplicar clases de peso
-	// ya que tienen sus pesos incorporados en la familia de fuentes
 	const finalFont = font ?? defaultStyles.font
+	const finalColor = color ?? defaultStyles.color
+
 	const isSpecificFontVariant =
 		finalFont !== 'clash' &&
 		finalFont !== 'league' &&
 		finalFont !== 'league-condensed' &&
 		finalFont !== 'league-semicondensed'
 
-	// Solo aplicar clase de peso si se usa una fuente variable o una fuente que admite pesos
 	const weightClass = isSpecificFontVariant ? '' : weightClasses[finalWeight]
 	const fontWeight = isSpecificFontVariant
 		? undefined
 		: fontWeightMap[finalWeight]
 
-	// Usar estilo inline para garantizar que se aplique la fuente y tamaño correctos
 	const fontFamily = fontFamilyMap[finalFont]
 	const fontSize = fontSizeMap[finalSize]
 	const style = {
@@ -156,9 +177,10 @@ export const Typography = ({
 				sizeClasses[finalSize],
 				weightClass,
 				fontClasses[finalFont],
+				colorClasses[finalColor],
 				className
 			),
-			style, // Aplicar estilos inline para asegurar la fuente y tamaño correctos
+			style,
 			...props
 		},
 		children

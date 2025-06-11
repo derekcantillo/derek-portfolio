@@ -4,8 +4,13 @@ import { Typography } from 'components/ui/Typography'
 
 export const Projects = () => {
 	return (
-		<section className={cn('bg-gray-50 py-20')}>
-			<div className={cn('mx-auto px-4')}>
+		<section
+			id="projects"
+			className={cn(
+				'container mx-auto flex min-h-screen items-center justify-center'
+			)}
+		>
+			<div className={cn('')}>
 				<Typography variant="h2" className="mb-8">
 					Projects
 				</Typography>

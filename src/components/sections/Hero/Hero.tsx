@@ -8,6 +8,7 @@ import { AnimatedText } from './AnimatedText'
 export const Hero = () => {
 	return (
 		<section
+			id="hero"
 			className={cn(
 				'container mx-auto flex min-h-screen items-center justify-center'
 			)}

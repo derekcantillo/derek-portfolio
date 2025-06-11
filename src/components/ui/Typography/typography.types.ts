@@ -53,10 +53,13 @@ export type TypographyFont =
 	| 'league-condensed'
 	| 'league-semicondensed'
 
+export type TypographyColor = 'light' | 'dark' | 'accent' | 'inherit'
+
 export interface TypographyProps extends HTMLAttributes<HTMLElement> {
 	variant?: TypographyVariant
 	size?: TypographySize
 	weight?: TypographyWeight
 	font?: TypographyFont
+	color?: TypographyColor
 	as?: TypographyVariant
 }

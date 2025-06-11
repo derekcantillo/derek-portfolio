@@ -3,8 +3,31 @@
 @import '../styles/league-gothic.css';
 
 :root {
-	--background: #eeeeee;
-	--foreground: #131313;
+	/* Colors */
+	--color-light: #eeeeee;
+	--color-dark: #131313;
+	--color-accent: #48cfcb;
+
+	/* Base theme colors */
+	--background: var(--color-light);
+	--foreground: var(--color-dark);
+}
+
+@theme {
+	/* Custom colors */
+	--color-light: #eeeeee;
+	--color-dark: #131313;
+	--color-accent: #48cfcb;
+
+	/* Base theme colors */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+/* Fonts */
+:root {
 	--font-clash: 'ClashDisplay-Variable', sans-serif;
 	--font-league: 'LeagueGothic-Regular', sans-serif;
 	--font-league-condensed: 'LeagueGothic-Condensed', sans-serif;
@@ -18,17 +41,10 @@
 	--font-clash-variable: 'ClashDisplay-Variable', sans-serif;
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #131313;
-		--foreground: #eeeeee;
+		--background: var(--color-dark);
+		--foreground: var(--color-light);
 	}
 }
 
