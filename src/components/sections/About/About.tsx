@@ -28,7 +28,7 @@ export const About = () => {
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 					{/* Profile Section - Top row, first two columns */}
 					<div className="md:col-span-2">
-						<div className="h-full border-2 border-white p-6">
+						<div className="h-full rounded-lg border-2 border-white p-6">
 							<div className="mb-6 flex items-center">
 								<Typography variant="h3">Professional Profile</Typography>
 							</div>
@@ -58,7 +58,7 @@ export const About = () => {
 
 					{/* Image Section - Both rows, last column */}
 					<div className="md:col-span-1 md:row-span-2">
-						<div className="flex h-full items-center justify-center border-2 border-white">
+						<div className="flex h-full items-center justify-center overflow-hidden rounded-lg border-2 border-white">
 							<div className="relative h-full w-full overflow-hidden">
 								<Image
 									src={IMAGES.DEGREE_PHOTO}
@@ -74,7 +74,7 @@ export const About = () => {
 					{/* Key Facts - Bottom row, first two columns */}
 					<div className="grid grid-cols-3 gap-4 md:col-span-2">
 						{/* Experience */}
-						<div className="border-primary/20 border-2 p-6 shadow-md">
+						<div className="border-primary/20 rounded-lg border-2 p-6 shadow-md">
 							<div className="bg-primary/40 text-primary mb-4 flex h-10 w-10 items-center justify-center">
 								<ClockIcon className="h-6 w-6" />
 							</div>
@@ -88,7 +88,7 @@ export const About = () => {
 						</div>
 
 						{/* Education */}
-						<div className="border-secondary/20 border-2 p-6 shadow-md">
+						<div className="border-secondary/20 rounded-lg border-2 p-6 shadow-md">
 							<div className="bg-secondary/40 text-secondary mb-4 flex h-10 w-10 items-center justify-center">
 								<AcademicCapIcon className="h-6 w-6" />
 							</div>
@@ -101,7 +101,7 @@ export const About = () => {
 						</div>
 
 						{/* Passion */}
-						<div className="border-accent border-2 p-6 shadow-md">
+						<div className="border-accent rounded-lg border-2 p-6 shadow-md">
 							<div className="text-accent bg-accent/40 mb-4 flex h-10 w-10 items-center justify-center">
 								<HeartIcon className="h-6 w-6" />
 							</div>
