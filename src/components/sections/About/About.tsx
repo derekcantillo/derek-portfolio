@@ -35,7 +35,7 @@ export const About = () => {
 		<section
 			id="about"
 			className={cn(
-				'container mx-auto flex min-h-screen items-center justify-center py-16'
+				'container mx-auto flex min-h-screen items-center justify-center'
 			)}
 		>
 			<div className="w-ful">
