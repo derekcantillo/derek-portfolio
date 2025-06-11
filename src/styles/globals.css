@@ -1,0 +1,9 @@
+/* Add perspective class for the 3D effect */
+.perspective-1000 {
+	perspective: 1000px;
+}
+
+/* Add text shadow for enhanced 3D effect */
+.text-shadow-sm {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}

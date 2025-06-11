@@ -1,39 +1,44 @@
+'use client'
 import React from 'react'
-import { cn } from 'utils'
+import { cn, IMAGES } from 'utils'
 import { Typography } from 'components/ui/Typography'
+import Image from 'next/image'
+import { AnimatedText } from './AnimatedText'
 
 export const Hero = () => {
 	return (
-		<section className={cn('flex min-h-screen items-center justify-center')}>
-			<div className={cn('container mx-auto px-4')}>
-				<Typography variant="h1" className="mb-4" size="6xl">
-					Derek Portfolio
-				</Typography>
-				<Typography
-					variant="h3"
-					font="clash-medium"
-					className="mb-6"
-					size="4xl"
-				>
-					Creative Developer & Designer
-				</Typography>
+		<section
+			className={cn(
+				'container mx-auto flex min-h-screen items-center justify-center'
+			)}
+		>
+			<div
+				className={cn(
+					'flex w-full flex-row items-center justify-between gap-8'
+				)}
+			>
+				<div className="flex flex-col">
+					<Typography
+						variant="h2"
+						className="mb-4"
+						size="4xl"
+						font="clash-regular"
+					>
+						Hey, I&apos;m Derek
+					</Typography>
 
-				<div className="max-w-2xl space-y-4">
-					<Typography font="clash-regular" size="2xl">
-						Regular text (2xl) - Clash Display Regular
-					</Typography>
-					<Typography font="clash-light" size="xl">
-						Light text (xl) - Clash Display Light
-					</Typography>
-					<Typography font="clash-bold" size="lg">
-						Bold text (lg) - Clash Display Bold
-					</Typography>
-					<Typography font="league-condensed" size="3xl">
-						Condensed text (3xl) - League Gothic Condensed
-					</Typography>
-					<Typography font="league-semicondensed" size="base">
-						Semi-condensed text (base) - League Gothic Semi-Condensed
-					</Typography>
+					<AnimatedText />
+				</div>
+
+				<div className="relative aspect-square w-full max-w-md">
+					<div className="absolute inset-0 rounded-full border-2 border-gray-400"></div>
+					<Image
+						src={IMAGES.PROFILE_PHOTO}
+						alt="Derek's photo"
+						fill
+						className="rounded-full object-cover p-2"
+						priority
+					/>
 				</div>
 			</div>
 		</section>

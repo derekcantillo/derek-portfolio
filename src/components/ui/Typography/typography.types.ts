@@ -22,6 +22,10 @@ export type TypographySize =
 	| '4xl'
 	| '5xl'
 	| '6xl'
+	| '7xl'
+	| '8xl'
+	| '9xl'
+	| '10xl'
 
 export type TypographyWeight =
 	| 'thin'

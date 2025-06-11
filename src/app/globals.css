@@ -1,17 +1,14 @@
+@import 'tailwindcss';
 @import '../styles/clash-display.css';
 @import '../styles/league-gothic.css';
-@import 'tailwindcss/preflight';
-@tailwind utilities;
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
-	/* Font family variables */
+	--background: #eeeeee;
+	--foreground: #131313;
 	--font-clash: 'ClashDisplay-Variable', sans-serif;
 	--font-league: 'LeagueGothic-Regular', sans-serif;
 	--font-league-condensed: 'LeagueGothic-Condensed', sans-serif;
 	--font-league-semicondensed: 'LeagueGothic-SemiCondensed', sans-serif;
-	/* Individual Clash Display fonts */
 	--font-clash-extralight: 'ClashDisplay-Extralight', sans-serif;
 	--font-clash-light: 'ClashDisplay-Light', sans-serif;
 	--font-clash-regular: 'ClashDisplay-Regular', sans-serif;
@@ -30,8 +27,8 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+		--background: #131313;
+		--foreground: #eeeeee;
 	}
 }
 

@@ -47,7 +47,11 @@ const sizeClasses = {
 	'3xl': 'text-3xl',
 	'4xl': 'text-4xl',
 	'5xl': 'text-5xl',
-	'6xl': 'text-6xl'
+	'6xl': 'text-6xl',
+	'7xl': 'text-7xl',
+	'8xl': 'text-8xl',
+	'9xl': 'text-9xl',
+	'10xl': 'text-10xl'
 }
 
 // Mapeo de tamaños a valores de píxeles para usar con estilos inline
@@ -61,7 +65,11 @@ const fontSizeMap = {
 	'3xl': '1.875rem', // 30px
 	'4xl': '2.25rem', // 36px
 	'5xl': '3rem', // 48px
-	'6xl': '3.75rem' // 60px
+	'6xl': '3.75rem', // 60px
+	'7xl': '4.5rem', // 72px
+	'8xl': '5.25rem', // 84px
+	'9xl': '6rem', // 96px
+	'10xl': '7.5rem' // 120px
 }
 
 const weightClasses = {
