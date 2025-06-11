@@ -113,7 +113,7 @@ const defaultVariantMapping = {
 	h5: { size: '2xl', weight: 'medium', font: 'clash', color: 'inherit' },
 	h6: { size: 'xl', weight: 'medium', font: 'clash', color: 'inherit' },
 	p: {
-		size: 'base',
+		size: 'lg',
 		weight: 'normal',
 		font: 'clash-regular',
 		color: 'inherit'
