@@ -54,7 +54,7 @@ export const About = () => {
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 					{/* Profile Section - Top row, first two columns */}
 					<div className="md:col-span-2">
-						<div className="h-full rounded-lg p-6">
+						<div className="h-full rounded-lg">
 							<div className="mb-6 flex items-center">
 								<Typography variant="h3">Professional Profile</Typography>
 							</div>
