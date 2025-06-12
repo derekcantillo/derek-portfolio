@@ -99,7 +99,7 @@ export const Projects = () => {
 													href={project.github}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="rounded-full bg-white p-3 text-black transition-all hover:bg-gray-200"
+													className="bg-light rounded-full p-3 text-black transition-all hover:bg-gray-200"
 												>
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export const Projects = () => {
 												href={project.link}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="rounded-full bg-white p-3 text-black transition-all hover:bg-gray-200"
+												className="bg-light rounded-full p-3 text-black transition-all hover:bg-gray-200"
 											>
 												<GlobeAltIcon className="h-6 w-6" />
 											</a>
@@ -125,7 +125,7 @@ export const Projects = () => {
 
 									{/* Project title overlay at bottom */}
 									<div className="bg-opacity-70 absolute right-0 bottom-0 left-0 bg-black p-4">
-										<Typography variant="h4" className="text-white">
+										<Typography variant="h4" className="text-light">
 											{project.title}
 										</Typography>
 										<Typography variant="p" className="text-gray-300" size="sm">

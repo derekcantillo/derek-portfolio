@@ -11,8 +11,8 @@ export const Header = () => {
 		() => [
 			{ name: 'Home', href: '#hero', id: 'hero' },
 			{ name: 'About', href: '#about', id: 'about' },
-			{ name: 'Projects', href: '#projects', id: 'projects' },
 			{ name: 'Experience', href: '#experience', id: 'experience' },
+			{ name: 'Projects', href: '#projects', id: 'projects' },
 			{ name: 'Contact', href: '#contact', id: 'contact' }
 		],
 		[]
@@ -51,7 +51,7 @@ export const Header = () => {
 	}, [sections])
 
 	return (
-		<header className="fixed top-0 left-0 z-50 w-full backdrop-blur-md">
+		<header className="bg-dark/50 fixed top-0 left-0 z-50 w-full backdrop-blur-md">
 			<div className="container mx-auto flex items-center justify-between px-4 py-4">
 				{/* Logo */}
 				<div className="text-2xl font-bold">
