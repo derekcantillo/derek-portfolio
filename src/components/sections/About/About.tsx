@@ -54,7 +54,7 @@ export const About = () => {
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 					{/* Profile Section - Top row, first two columns */}
 					<div className="md:col-span-2">
-						<div className="h-full rounded-lg border-2 border-white p-6">
+						<div className="h-full rounded-lg p-6">
 							<div className="mb-6 flex items-center">
 								<Typography variant="h3">Professional Profile</Typography>
 							</div>
@@ -84,7 +84,7 @@ export const About = () => {
 
 					{/* Image Section - Both rows, last column */}
 					<div className="md:col-span-1 md:row-span-2">
-						<div className="flex h-full items-center justify-center overflow-hidden rounded-lg border-2 border-white">
+						<div className="flex h-full items-center justify-center overflow-hidden border p-2">
 							<div className="relative h-full w-full overflow-hidden">
 								<Image
 									src={IMAGES.DEGREE_PHOTO}
@@ -108,7 +108,7 @@ export const About = () => {
 							return (
 								<div
 									key={fact.title}
-									className={`rounded-lg border-2 ${borderColorClass} p-6 shadow-md`}
+									className={`border ${borderColorClass} p-6 shadow-md`}
 								>
 									<div
 										className={`mb-4 flex h-10 w-10 items-center justify-center ${bgColorClass} ${textColorClass}`}

@@ -84,7 +84,7 @@ export const Projects = () => {
 								className={`${widthClass} h-[30rem] p-3`}
 							>
 								<div
-									className="group relative h-full w-full overflow-hidden rounded-lg"
+									className="group relative h-full w-full overflow-hidden"
 									style={{
 										backgroundImage: `url(${project.image})`,
 										backgroundSize: 'cover',
