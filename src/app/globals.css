@@ -5,8 +5,8 @@
 :root {
 	/* Colors */
 	--color-light: #eeeeee;
-	--color-dark: #131313;
-	--color-accent: #48cfcb;
+	--color-dark: #121418;
+	--color-accent: #50c878;
 
 	/* Base theme colors */
 	--background: var(--color-light);
@@ -16,8 +16,8 @@
 @theme {
 	/* Custom colors */
 	--color-light: #eeeeee;
-	--color-dark: #131313;
-	--color-accent: #48cfcb;
+	--color-dark: #121418;
+	--color-accent: #50c878;
 
 	/* Base theme colors */
 	--color-background: var(--background);

@@ -48,10 +48,10 @@ const ExperienceItem = ({
 						{position}
 					</Typography>
 					<div className="mt-1 flex items-center justify-between">
-						<Typography variant="caption" className="text-gray-300">
+						<Typography variant="span" size="sm" className="text-gray-300">
 							{location}
 						</Typography>
-						<Typography variant="caption" className="text-gray-300">
+						<Typography variant="span" size="sm" className="text-gray-300">
 							{period}
 						</Typography>
 					</div>

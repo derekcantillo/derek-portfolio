@@ -106,8 +106,8 @@ const colorClasses = {
 }
 
 const defaultVariantMapping = {
-	h1: { size: '6xl', weight: 'bold', font: 'league', color: 'inherit' },
-	h2: { size: '5xl', weight: 'bold', font: 'league', color: 'inherit' },
+	h1: { size: '6xl', weight: 'bold', font: 'clash', color: 'inherit' },
+	h2: { size: '5xl', weight: 'bold', font: 'clash', color: 'inherit' },
 	h3: { size: '4xl', weight: 'semibold', font: 'clash', color: 'inherit' },
 	h4: { size: '3xl', weight: 'semibold', font: 'clash', color: 'inherit' },
 	h5: { size: '2xl', weight: 'medium', font: 'clash', color: 'inherit' },
