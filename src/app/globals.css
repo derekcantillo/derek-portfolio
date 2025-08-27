@@ -75,3 +75,55 @@ html,
 body {
 	scroll-snap-type: none;
 }
+
+/* Experience Timeline Styles */
+.experience-card {
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0.25 !important;
+	transform: scale(0.85) !important;
+	filter: blur(3px) !important;
+}
+
+.experience-card.active {
+	opacity: 1 !important;
+	transform: scale(1) !important;
+	filter: blur(0px) !important;
+	z-index: 10 !important;
+}
+
+/* Navigation Indicators */
+.nav-indicator {
+	transition: all 0.3s ease;
+}
+
+.nav-indicator.active {
+	background-color: var(--color-accent) !important;
+	transform: scale(1.2);
+}
+
+.nav-indicator:not(.active) {
+	background-color: #9ca3af;
+}
+
+/* Timeline Enhancements */
+.experience-card .timeline-point {
+	box-shadow: 0 0 8px rgba(80, 200, 120, 0.6);
+}
+
+.experience-card.active .timeline-point {
+	box-shadow:
+		0 0 16px rgba(80, 200, 120, 1),
+		0 0 24px rgba(80, 200, 120, 0.5);
+	transform: scale(1.4);
+}
+
+/* Card hover and active states */
+.experience-card .card-content {
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card.active .card-content {
+	box-shadow: 0 12px 48px rgba(80, 200, 120, 0.2);
+	border-color: rgba(80, 200, 120, 0.3);
+}

@@ -89,6 +89,16 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
 			}
 
 			const handleWheel = (e: WheelEvent) => {
+				// Check if we're in the Experience section with pinned scroll
+				const experienceSection = document.getElementById('experience')
+				if (experienceSection) {
+					const rect = experienceSection.getBoundingClientRect()
+					// If Experience section is visible and pinned, don't interfere
+					if (rect.top <= 10 && rect.bottom >= window.innerHeight - 10) {
+						return // Let Experience section handle its own scroll
+					}
+				}
+
 				e.preventDefault()
 
 				const targetSection = findTargetSection(e.deltaY)
@@ -104,6 +114,16 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
 			}
 
 			const handleTouchEnd = (e: TouchEvent) => {
+				// Check if we're in the Experience section with pinned scroll
+				const experienceSection = document.getElementById('experience')
+				if (experienceSection) {
+					const rect = experienceSection.getBoundingClientRect()
+					// If Experience section is visible and pinned, don't interfere
+					if (rect.top <= 10 && rect.bottom >= window.innerHeight - 10) {
+						return // Let Experience section handle its own scroll
+					}
+				}
+
 				const touchEndY = e.changedTouches[0].clientY
 				const deltaY = touchStartY - touchEndY
 
