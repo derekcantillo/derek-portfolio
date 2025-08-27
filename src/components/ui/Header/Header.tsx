@@ -53,14 +53,12 @@ export const Header = () => {
 	return (
 		<header className="bg-dark/50 fixed top-0 left-0 z-50 w-full backdrop-blur-md">
 			<div className="container mx-auto flex items-center justify-between px-4 py-4">
-				{/* Logo */}
 				<div className="text-2xl font-bold">
 					<Link href="/">
 						<span className="text-accent">D</span>
 					</Link>
 				</div>
 
-				{/* Navigation */}
 				<nav>
 					<ul className="flex space-x-6">
 						{sections.map(section => (

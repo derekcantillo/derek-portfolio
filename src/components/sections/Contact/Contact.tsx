@@ -1,16 +1,10 @@
 'use client'
 
 import React from 'react'
-import { cn } from 'utils'
+import { cn, CONTACT_INFO } from 'utils'
 import { Typography } from 'components/ui/Typography'
 
 export const Contact = () => {
-	const contactInfo = {
-		email: 'cantilloderek@gmail.com',
-		location: 'Barranquilla, Colombia',
-		name: 'Derek Cantillo'
-	}
-
 	const availableFor = [
 		'Full-time positions',
 		'Freelance projects',
@@ -20,11 +14,11 @@ export const Contact = () => {
 	const socialLinks = [
 		{
 			name: 'GitHub',
-			url: 'https://github.com/derekcantillo'
+			url: CONTACT_INFO.SOCIAL.GITHUB
 		},
 		{
 			name: 'LinkedIn',
-			url: 'https://www.linkedin.com/in/derek-cantillo'
+			url: CONTACT_INFO.SOCIAL.LINKEDIN
 		}
 	]
 
@@ -53,10 +47,10 @@ export const Contact = () => {
 									Email
 								</Typography>
 								<a
-									href={`mailto:${contactInfo.email}`}
+									href={`mailto:${CONTACT_INFO.EMAIL}`}
 									className="text-lg hover:underline"
 								>
-									{contactInfo.email}
+									{CONTACT_INFO.EMAIL}
 								</a>
 							</div>
 
@@ -64,7 +58,7 @@ export const Contact = () => {
 								<Typography variant="h4" className="mb-2">
 									Location
 								</Typography>
-								<Typography variant="p">{contactInfo.location}</Typography>
+								<Typography variant="p">{CONTACT_INFO.LOCATION}</Typography>
 							</div>
 
 							<div>
@@ -124,7 +118,7 @@ export const Contact = () => {
 
 				<div className="mt-16 border-t border-[#131313]/20 pt-8 text-center">
 					<Typography variant="span" size="sm">
-						© {new Date().getFullYear()} {contactInfo.name}. All rights
+						© {new Date().getFullYear()} {CONTACT_INFO.NAME}. All rights
 						reserved.
 					</Typography>
 				</div>

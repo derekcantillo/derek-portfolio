@@ -7,3 +7,14 @@ export const IMAGES = {
 	MARVEL_APP: '/assets/images/marvel.jpg',
 	SIAM_EXPLORER: '/assets/images/siam-explorer.png'
 }
+
+export const CONTACT_INFO = {
+	EMAIL: 'cantilloderek@gmail.com',
+	LOCATION: 'Barranquilla, Colombia',
+	NAME: 'Derek Cantillo',
+	SOCIAL: {
+		GITHUB: 'https://github.com/derekcantillo',
+		LINKEDIN: 'https://www.linkedin.com/in/derek-cantillo',
+		INSTAGRAM: 'https://www.instagram.com/dereskeree'
+	}
+}
