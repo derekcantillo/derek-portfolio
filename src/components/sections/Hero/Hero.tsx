@@ -9,6 +9,7 @@ import Link from 'next/link'
 export const Hero = () => {
 	return (
 		<section
+			data-scroll-section
 			id="hero"
 			className={cn(
 				'container mx-auto flex min-h-screen items-center justify-center'

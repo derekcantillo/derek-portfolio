@@ -53,3 +53,25 @@ body {
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Smooth Scroll Styles */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Section styles */
+[data-scroll-section] {
+	min-height: 100vh;
+	position: relative;
+	transition: opacity 0.3s ease;
+}
+
+[data-scroll-section].scroll-active {
+	opacity: 1;
+}
+
+/* Override any default scroll snap */
+html,
+body {
+	scroll-snap-type: none;
+}

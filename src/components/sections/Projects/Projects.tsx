@@ -49,6 +49,7 @@ export const Projects = () => {
 
 	return (
 		<section
+			data-scroll-section
 			id="projects"
 			className={cn(
 				'container mx-auto flex min-h-screen items-center justify-center py-16'

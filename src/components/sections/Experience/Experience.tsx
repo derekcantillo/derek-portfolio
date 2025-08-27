@@ -123,6 +123,7 @@ export const Experience = () => {
 
 	return (
 		<section
+			data-scroll-section
 			id="experience"
 			className={cn(
 				'container mx-auto flex min-h-screen flex-col items-center py-24'

@@ -33,6 +33,7 @@ const keyFacts = [
 export const About = () => {
 	return (
 		<section
+			data-scroll-section
 			id="about"
 			className={cn(
 				'container mx-auto flex min-h-screen items-center justify-center'

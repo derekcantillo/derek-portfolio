@@ -26,6 +26,7 @@ export const Contact = () => {
 
 	return (
 		<section
+			data-scroll-section
 			id="contact"
 			className={cn('mt-20 bg-[#48cfcb] py-16 text-[#131313]')}
 		>
