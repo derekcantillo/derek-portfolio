@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { cn } from '../../../utils/cn'
 import { Typography } from '../Typography'
+import { ThemeToggle } from '../ThemeToggle'
 
 export const Header = () => {
 	const [activeSection, setActiveSection] = useState('hero')
@@ -59,34 +60,39 @@ export const Header = () => {
 					</Link>
 				</div>
 
-				<nav>
-					<ul className="flex space-x-6">
-						{sections.map(section => (
-							<li key={section.name}>
-								<Link href={section.href}>
-									<Typography
-										variant="p"
-										size="lg"
-										className={cn(
-											'hover:text-accent transition-all duration-300',
-											activeSection === section.id
-												? 'origin-left scale-x-110'
-												: 'scale-x-100'
-										)}
-										font={
-											activeSection === section.id
-												? 'clash-semibold'
-												: 'clash-regular'
-										}
-										color={activeSection === section.id ? 'accent' : 'inherit'}
-									>
-										{section.name}
-									</Typography>
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
+				<div className="flex items-center gap-6">
+					<nav>
+						<ul className="flex space-x-6">
+							{sections.map(section => (
+								<li key={section.name}>
+									<Link href={section.href}>
+										<Typography
+											variant="p"
+											size="lg"
+											className={cn(
+												'hover:text-accent transition-all duration-300',
+												activeSection === section.id
+													? 'origin-left scale-x-110'
+													: 'scale-x-100'
+											)}
+											font={
+												activeSection === section.id
+													? 'clash-semibold'
+													: 'clash-regular'
+											}
+											color={
+												activeSection === section.id ? 'accent' : 'inherit'
+											}
+										>
+											{section.name}
+										</Typography>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+					<ThemeToggle />
+				</div>
 			</div>
 		</header>
 	)

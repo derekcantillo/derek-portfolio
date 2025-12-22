@@ -1,3 +1,5 @@
 export * from './Header'
 export * from './Typography'
 export * from './SmoothScroll'
+export * from './ThemeToggle'
+export * from './ThemeProvider'

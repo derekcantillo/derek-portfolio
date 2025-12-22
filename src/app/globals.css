@@ -8,7 +8,7 @@
 	--color-dark: #121418;
 	--color-accent: #e7473c;
 
-	/* Base theme colors */
+	/* Base theme colors - default to light */
 	--background: var(--color-light);
 	--foreground: var(--color-dark);
 }
@@ -41,8 +41,22 @@
 	--font-clash-variable: 'ClashDisplay-Variable', sans-serif;
 }
 
+/* Light theme (default) */
+:root,
+[data-theme='light'] {
+	--background: var(--color-light);
+	--foreground: var(--color-dark);
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+	--background: var(--color-dark);
+	--foreground: var(--color-light);
+}
+
+/* System theme - fallback to media query */
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme]) {
 		--background: var(--color-dark);
 		--foreground: var(--color-light);
 	}
