@@ -6,7 +6,7 @@
 	/* Colors */
 	--color-light: #eeeeee;
 	--color-dark: #121418;
-	--color-accent: #50c878;
+	--color-accent: #e7473c;
 
 	/* Base theme colors */
 	--background: var(--color-light);
@@ -17,7 +17,7 @@
 	/* Custom colors */
 	--color-light: #eeeeee;
 	--color-dark: #121418;
-	--color-accent: #50c878;
+	--color-accent: #e7473c;
 
 	/* Base theme colors */
 	--color-background: var(--background);
