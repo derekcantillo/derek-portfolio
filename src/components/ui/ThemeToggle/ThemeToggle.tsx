@@ -23,11 +23,9 @@ export const ThemeToggle = () => {
 			setEffectiveTheme(getEffectiveTheme())
 		}
 
-		// Listen for system theme changes
 		const mediaQuery = globalThis.matchMedia('(prefers-color-scheme: dark)')
 		mediaQuery.addEventListener('change', updateEffectiveTheme)
 
-		// Apply theme to document
 		const currentTheme = getEffectiveTheme()
 		document.documentElement.dataset.theme = currentTheme
 		setEffectiveTheme(currentTheme)
@@ -38,7 +36,6 @@ export const ThemeToggle = () => {
 	}, [theme, mounted, getEffectiveTheme])
 
 	const handleToggle = () => {
-		// Ciclo: light -> dark -> system -> light
 		let newTheme: Theme
 		if (theme === 'light') {
 			newTheme = 'dark'
@@ -77,7 +74,6 @@ export const ThemeToggle = () => {
 			aria-label={`Current theme: ${theme}. Click to change.`}
 			title={isSystem ? `System (${effectiveTheme})` : theme}
 		>
-			{/* Indicador deslizante */}
 			<span
 				className={cn(
 					'absolute inline-flex h-8 w-8 transform items-center justify-center rounded-full transition-all duration-300',
@@ -94,7 +90,6 @@ export const ThemeToggle = () => {
 				)}
 			</span>
 
-			{/* Iconos de fondo */}
 			<div className="flex w-full items-center justify-between px-2">
 				<SunIcon
 					className={cn(
@@ -110,7 +105,6 @@ export const ThemeToggle = () => {
 				/>
 			</div>
 
-			{/* Indicador pequeño para System mode */}
 			{isSystem && (
 				<span className="bg-accent border-background absolute -top-1 -right-1 h-2 w-2 animate-pulse rounded-full border" />
 			)}
