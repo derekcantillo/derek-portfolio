@@ -1,26 +1,166 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '../styles/clash-display.css';
+@import '../styles/league-gothic.css';
+
+/* Tailwind 4 Dark Mode Configuration */
+@variant dark (&:is([data-theme="dark"] *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	/* Colors */
+	--color-light: #eeeeee;
+	--color-dark: #121418;
+	--color-accent: #e7473c;
+	--color-accent-light: #d0bb95;
+	--color-neutral: #f5f5f5;
+	--color-neutral-dark: #1e1e1e;
+	--color-border: #e0e0e0;
+	--color-border-dark: #374151;
+
+	/* Base theme colors - default to light */
+	--background: var(--color-light);
+	--foreground: var(--color-dark);
+	--card-bg: var(--color-neutral);
+	--border-color: var(--color-border);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+	/* Custom colors */
+	--color-light: #eeeeee;
+	--color-dark: #121418;
+	--color-accent: #e7473c;
+	--color-accent-light: #d0bb95;
+	--color-neutral: #f5f5f5;
+	--color-neutral-dark: #1e1e1e;
+	--color-border: #e0e0e0;
+	--color-border-dark: #374151;
+
+	/* Base theme colors */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card-bg: var(--card-bg);
+	--color-border-color: var(--border-color);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
+/* Fonts */
+:root {
+	--font-clash: 'ClashDisplay-Variable', sans-serif;
+	--font-league: 'LeagueGothic-Regular', sans-serif;
+	--font-league-condensed: 'LeagueGothic-Condensed', sans-serif;
+	--font-league-semicondensed: 'LeagueGothic-SemiCondensed', sans-serif;
+	--font-clash-extralight: 'ClashDisplay-Extralight', sans-serif;
+	--font-clash-light: 'ClashDisplay-Light', sans-serif;
+	--font-clash-regular: 'ClashDisplay-Regular', sans-serif;
+	--font-clash-medium: 'ClashDisplay-Medium', sans-serif;
+	--font-clash-semibold: 'ClashDisplay-Semibold', sans-serif;
+	--font-clash-bold: 'ClashDisplay-Bold', sans-serif;
+	--font-clash-variable: 'ClashDisplay-Variable', sans-serif;
+}
+
+/* Light theme (default) */
+:root,
+[data-theme='light'] {
+	--background: var(--color-light);
+	--foreground: var(--color-dark);
+	--card-bg: var(--color-neutral);
+	--border-color: var(--color-border);
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+	--background: var(--color-dark);
+	--foreground: var(--color-light);
+	--card-bg: var(--color-neutral-dark);
+	--border-color: var(--color-border-dark);
+}
+
+/* System theme - fallback to media query */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root:not([data-theme]) {
+		--background: var(--color-dark);
+		--foreground: var(--color-light);
+		--card-bg: var(--color-neutral-dark);
+		--border-color: var(--color-border-dark);
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth Scroll Styles */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Section styles */
+[data-scroll-section] {
+	min-height: 100vh;
+	position: relative;
+	transition: opacity 0.3s ease;
+}
+
+[data-scroll-section].scroll-active {
+	opacity: 1;
+}
+
+/* Override any default scroll snap */
+html,
+body {
+	scroll-snap-type: none;
+}
+
+/* Experience Timeline Styles */
+.experience-card {
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0.25 !important;
+	transform: scale(0.85) !important;
+	filter: blur(3px) !important;
+}
+
+.experience-card.active {
+	opacity: 1 !important;
+	transform: scale(1) !important;
+	filter: blur(0px) !important;
+	z-index: 10 !important;
+}
+
+/* Navigation Indicators */
+.nav-indicator {
+	transition: all 0.3s ease;
+}
+
+.nav-indicator.active {
+	background-color: var(--color-accent) !important;
+	transform: scale(1.2);
+}
+
+.nav-indicator:not(.active) {
+	background-color: #9ca3af;
+}
+
+/* Timeline Enhancements */
+.experience-card .timeline-point {
+	box-shadow: 0 0 8px rgba(80, 200, 120, 0.6);
+}
+
+.experience-card.active .timeline-point {
+	box-shadow:
+		0 0 16px rgba(80, 200, 120, 1),
+		0 0 24px rgba(80, 200, 120, 0.5);
+	transform: scale(1.4);
+}
+
+/* Card hover and active states */
+.experience-card .card-content {
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card.active .card-content {
+	box-shadow: 0 12px 48px rgba(80, 200, 120, 0.2);
+	border-color: rgba(80, 200, 120, 0.3);
 }
