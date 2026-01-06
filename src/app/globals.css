@@ -11,10 +11,16 @@
 	--color-dark: #121418;
 	--color-accent: #e7473c;
 	--color-accent-light: #d0bb95;
+	--color-neutral: #f5f5f5;
+	--color-neutral-dark: #1e1e1e;
+	--color-border: #e0e0e0;
+	--color-border-dark: #374151;
 
 	/* Base theme colors - default to light */
 	--background: var(--color-light);
 	--foreground: var(--color-dark);
+	--card-bg: var(--color-neutral);
+	--border-color: var(--color-border);
 }
 
 @theme {
@@ -23,10 +29,16 @@
 	--color-dark: #121418;
 	--color-accent: #e7473c;
 	--color-accent-light: #d0bb95;
+	--color-neutral: #f5f5f5;
+	--color-neutral-dark: #1e1e1e;
+	--color-border: #e0e0e0;
+	--color-border-dark: #374151;
 
 	/* Base theme colors */
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
+	--color-card-bg: var(--card-bg);
+	--color-border-color: var(--border-color);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 }
@@ -51,12 +63,16 @@
 [data-theme='light'] {
 	--background: var(--color-light);
 	--foreground: var(--color-dark);
+	--card-bg: var(--color-neutral);
+	--border-color: var(--color-border);
 }
 
 /* Dark theme */
 [data-theme='dark'] {
 	--background: var(--color-dark);
 	--foreground: var(--color-light);
+	--card-bg: var(--color-neutral-dark);
+	--border-color: var(--color-border-dark);
 }
 
 /* System theme - fallback to media query */
@@ -64,6 +80,8 @@
 	:root:not([data-theme]) {
 		--background: var(--color-dark);
 		--foreground: var(--color-light);
+		--card-bg: var(--color-neutral-dark);
+		--border-color: var(--color-border-dark);
 	}
 }
 
