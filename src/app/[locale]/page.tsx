@@ -1,5 +1,5 @@
 import { Hero, About, Projects, Experience } from 'components/sections'
-import { Footer, Header } from 'components/ui'
+import { Footer, Header, FloatingActionButton } from 'components/ui'
 
 export default function Home() {
 	return (
@@ -10,6 +10,7 @@ export default function Home() {
 			<Experience />
 			<Projects />
 			<Footer />
+			<FloatingActionButton />
 		</main>
 	)
 }
