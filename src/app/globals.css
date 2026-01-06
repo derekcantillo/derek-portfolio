@@ -2,6 +2,9 @@
 @import '../styles/clash-display.css';
 @import '../styles/league-gothic.css';
 
+/* Tailwind 4 Dark Mode Configuration */
+@variant dark (&:is([data-theme="dark"] *));
+
 :root {
 	/* Colors */
 	--color-light: #eeeeee;
