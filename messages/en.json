@@ -1,0 +1,160 @@
+{
+	"header": {
+		"nav": {
+			"home": "Home",
+			"about": "About",
+			"experience": "Experience",
+			"projects": "Projects"
+		}
+	},
+	"hero": {
+		"greeting": "Hey, I'm Derek.",
+		"availableText": "Available for projects",
+		"roles": {
+			"0": "Frontend Developer",
+			"1": "Systems Engineer",
+			"2": "Backend Developer",
+			"3": "FullStack Developer"
+		},
+		"buttons": {
+			"letsTalk": "Let's Talk",
+			"downloadCV": "Download CV"
+		},
+		"experience": {
+			"years": "4+ Years",
+			"label": "Experience"
+		},
+		"imageAlt": "Derek's photo"
+	},
+	"about": {
+		"title": "ABOUT ME",
+		"heading": "More than code, I create experiences that connect.",
+		"paragraphs": {
+			"first": "Systems Engineer with over four years of experience in frontend development and fullstack focus, specialized in creating scalable and high-performance web and mobile applications. I work primarily with React, Next.js and React Native, and have participated in backend projects with Node.js and Python using different frameworks. I thrive in agile environments, collaborating with multidisciplinary teams, with a strong focus on user experience and clear communication in professional English.",
+			"second": "Born and raised in the Caribbean, an influence that is reflected in the passion I bring to each project. I combine the structured logic of backend with the creativity of frontend to build balanced digital products, where functionality, performance and aesthetics work together."
+		},
+		"keyFacts": {
+			"ux": {
+				"title": "UX/UI Enthusiast",
+				"description": "I create clean and user-friendly interfaces."
+			},
+			"performance": {
+				"title": "Performance",
+				"description": "Ultra fast websites."
+			},
+			"engineer": {
+				"title": "Systems Engineer",
+				"description": "Universidad del Magdalena graduate with a solid foundation."
+			}
+		},
+		"images": {
+			"degree": "Derek's bachelor's degree",
+			"university": "Universidad del Magdalena"
+		}
+	},
+	"experience": {
+		"title": "MY JOURNEY",
+		"heading": "Professional Experience",
+		"experiences": {
+			"0": {
+				"company": "Sofka technologies",
+				"position": "Development Consultant",
+				"location": "Remote",
+				"period": "Nov 2024 – present",
+				"description": "Frontend development applying the microfrontends pattern, with backend integration through monorepo architecture and focus on efficient unit testing.",
+				"stack": "React, React Native, Next JS, Jest, Typescript, Tailwind, axios, azure devops"
+			},
+			"1": {
+				"company": "BTI Rebus Technology",
+				"position": "Frontend Dev Mid Sr",
+				"location": "Remote",
+				"period": "Jul 2022 – Nov 2024",
+				"description": "Development of web and mobile applications with React, React Native and Next.js, optimizing performance and adapting solutions to different functional contexts. Technical leadership in agile teams, management of deployments in App Store and Google Play, and direct communication with clients in English to ensure continuous value delivery.",
+				"stack": "React, React Native, Next JS, Jest, Typescript, Tailwind, axios, Node JS, clickUp"
+			},
+			"2": {
+				"company": "INVEMAR",
+				"position": "Full Stack Developer",
+				"location": "Remote",
+				"period": "Feb 2022 – Jul 2024",
+				"description": "Full stack development with React and Django Rest Framework, process automation with Python and advanced experience in Oracle SQL. Implementation of web scraping with Beautiful Soup and Scrapy for data collection, and collaboration with multifunctional teams in requirements gathering and delivery of integrated solutions.",
+				"stack": "React, python, django rest Framework, oracle SQL, fast API"
+			},
+			"3": {
+				"company": "Virtual Solutions",
+				"position": "Jr Developer",
+				"location": "Remote",
+				"period": "Jan 2021 – Feb 2022",
+				"description": "Implementation of microfrontends in frontend projects, with backend integration under monorepo architecture. Development and optimization of unit tests to ensure software quality.",
+				"stack": "React, html, css, javascript, SASS, mySQL"
+			}
+		}
+	},
+	"projects": {
+		"title": "Portfolio",
+		"heading": "Featured Projects",
+		"list": {
+			"0": {
+				"title": "Blu Diners Club",
+				"description": "Development of the Blu Diners Club app"
+			},
+			"1": {
+				"title": "Play Clout",
+				"description": "Development of Fantasy Esports Platform"
+			},
+			"2": {
+				"title": "Liquilegal",
+				"description": "Development of Legal Platform"
+			},
+			"3": {
+				"title": "SIAM EXPLORER",
+				"description": "Participation in the INVEMAR SIAM Explorer project"
+			},
+			"4": {
+				"title": "Spotify Clone",
+				"description": "Clone of the Spotify app"
+			},
+			"5": {
+				"title": "Marvel App",
+				"description": "Development of the Marvel app"
+			}
+		}
+	},
+	"contact": {
+		"title": "Contact Me",
+		"subtitle": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+		"email": "Email",
+		"location": "Location",
+		"availableFor": {
+			"title": "Available for",
+			"items": {
+				"0": "Full-time positions",
+				"1": "Freelance projects",
+				"2": "Consulting work"
+			}
+		},
+		"connect": {
+			"title": "Let's Connect",
+			"subtitle": "The fastest way to contact me is through email or by connecting with me on my social networks."
+		},
+		"resume": {
+			"title": "Download My Resume",
+			"button": "Download CV"
+		},
+		"copyright": "All rights reserved."
+	},
+	"footer": {
+		"madeWith": "Made with",
+		"copyright": "Derek. Made with"
+	},
+	"mobileMenu": {
+		"menu": "Menu",
+		"copyright": "Derek Cantillo"
+	},
+	"common": {
+		"close": "Close",
+		"open": "Open",
+		"menu": "Menu"
+	}
+}
+

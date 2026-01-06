@@ -17,6 +17,8 @@ interface HeroContentProps {
 	showAvailableBadge?: boolean
 	githubUrl?: string
 	linkedinUrl?: string
+	letsTalkText?: string
+	downloadCVText?: string
 }
 
 const containerVariants = {
@@ -50,7 +52,9 @@ export const HeroContent = ({
 	resumeUrl,
 	showAvailableBadge = true,
 	githubUrl,
-	linkedinUrl
+	linkedinUrl,
+	letsTalkText = "Let's Talk",
+	downloadCVText = 'Download CV'
 }: HeroContentProps) => {
 	return (
 		<motion.div
@@ -111,7 +115,7 @@ export const HeroContent = ({
 					iconPosition="left"
 					className="w-full sm:w-auto"
 				>
-					Let&apos;s Talk
+					{letsTalkText}
 				</Button>
 
 				<Button
@@ -123,7 +127,7 @@ export const HeroContent = ({
 					download
 					className="w-full sm:w-auto"
 				>
-					Download CV
+					{downloadCVText}
 				</Button>
 			</motion.div>
 

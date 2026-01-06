@@ -1,11 +1,13 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { Typography } from '../Typography'
 import { CONTACT_INFO } from '../../../utils/constants'
 import { cn } from '../../../utils/cn'
 
 export const Footer = () => {
+	const t = useTranslations('footer')
 	const currentYear = new Date().getFullYear()
 
 	const socialLinks = [
@@ -122,7 +124,7 @@ export const Footer = () => {
 							font="clash-regular"
 							className="text-gray-600 dark:text-gray-400"
 						>
-							© {currentYear} Derek. Hecho con{' '}
+							© {currentYear} {t('copyright')}{' '}
 							<span className="text-accent">♥</span>.
 						</Typography>
 					</div>

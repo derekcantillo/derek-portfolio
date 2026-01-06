@@ -1,44 +1,47 @@
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { cn, IMAGES } from 'utils'
 import { Typography } from 'components/ui/Typography'
 import { GlobeAltIcon } from '@heroicons/react/24/outline'
 
 export const Projects = () => {
+	const t = useTranslations('projects')
+
 	const projects = [
 		{
-			title: 'Blu Diners Club',
-			description: 'Desarrollo de la app Blu Diners Club',
+			title: t('list.0.title'),
+			description: t('list.0.description'),
 			image: IMAGES.DINERS_CLUB,
 			link: 'https://play.google.com/store/apps/details?id=com.blu.de.diners.club'
 		},
 		{
-			title: 'Play Clout',
-			description: 'Desarrollo de Plataforma de Fantasy Esports',
+			title: t('list.1.title'),
+			description: t('list.1.description'),
 			image: IMAGES.PLAY_CLOUT,
 			link: 'https://playclout.gg/'
 		},
 		{
-			title: 'Liquilegal',
-			description: 'Desarrollo de Plataforma de Legal',
+			title: t('list.2.title'),
+			description: t('list.2.description'),
 			image: IMAGES.LIQUILEGAL,
 			link: 'https://liquilegal.com'
 		},
 		{
-			title: 'SIAM EXPLORER',
-			description: 'Participación en el proyecto SIAM Explorer del INVEMAR',
+			title: t('list.3.title'),
+			description: t('list.3.description'),
 			image: IMAGES.SIAM_EXPLORER,
 			link: 'https://siamexplorer.invemar.org.co/'
 		},
 		{
-			title: 'Spotify Clone',
-			description: 'Clon de la app Spotify',
+			title: t('list.4.title'),
+			description: t('list.4.description'),
 			image: IMAGES.SPOTIFY_CLONE,
 			link: 'https://derekcantillo.github.io/Spotify-Web-Clone/',
 			github: 'https://github.com/derekcantillo/Spotify-Web-Clone'
 		},
 		{
-			title: 'Marvel App',
-			description: 'Desarrollo de la app Marvel',
+			title: t('list.5.title'),
+			description: t('list.5.description'),
 			image: IMAGES.MARVEL_APP,
 			github: 'https://github.com/derekcantillo/marvel-app'
 		}
@@ -58,13 +61,13 @@ export const Projects = () => {
 						variant="span"
 						className="text-accent mb-1 block text-xs font-semibold tracking-wider uppercase sm:mb-2 sm:text-sm"
 					>
-						Portafolio
+						{t('title')}
 					</Typography>
 					<Typography
 						variant="h2"
 						className="text-foreground text-2xl sm:text-3xl lg:text-4xl"
 					>
-						Proyectos destacados
+						{t('heading')}
 					</Typography>
 				</div>
 				<div className="flex flex-wrap">

@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/utils'
 import { Typography } from '../Typography'
 
@@ -23,6 +24,8 @@ export const MobileMenu = ({
 	sections,
 	activeSection
 }: MobileMenuProps) => {
+	const t = useTranslations('mobileMenu')
+
 	// Prevent body scroll when menu is open
 	useEffect(() => {
 		if (isOpen) {
@@ -63,7 +66,7 @@ export const MobileMenu = ({
 					{/* Header */}
 					<div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-6">
 						<Typography variant="h3" size="xl" font="clash-semibold">
-							Menu
+							{t('menu')}
 						</Typography>
 						<button
 							onClick={onClose}
@@ -139,7 +142,7 @@ export const MobileMenu = ({
 							font="clash-regular"
 							className="text-gray-500 dark:text-gray-400 text-center"
 						>
-							© 2024 Derek Cantillo
+							© {new Date().getFullYear()} {t('copyright')}
 						</Typography>
 					</div>
 				</div>

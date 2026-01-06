@@ -1,5 +1,7 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useTransition } from 'react'
+import { useLocale } from 'next-intl'
+import { useRouter, usePathname } from '@/i18n/routing'
 import { cn } from '@/utils'
 import { Typography } from '../Typography'
 
@@ -20,8 +22,14 @@ interface LanguageSelectorProps {
 
 export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 	const [isOpen, setIsOpen] = useState(false)
-	const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[1]) // Default Spanish
+	const [isPending, startTransition] = useTransition()
+	const locale = useLocale()
+	const router = useRouter()
+	const pathname = usePathname()
 	const dropdownRef = useRef<HTMLDivElement>(null)
+
+	const currentLanguage =
+		languages.find(lang => lang.code === locale) || languages[1]
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -37,11 +45,11 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 		return () => document.removeEventListener('mousedown', handleClickOutside)
 	}, [])
 
-	const handleLanguageChange = (language: Language) => {
-		setCurrentLanguage(language)
+	const handleLanguageChange = (lang: Language) => {
 		setIsOpen(false)
-		// TODO: Implement language change logic with i18n
-		console.log('Language changed to:', language.code)
+		startTransition(() => {
+			router.replace(pathname, { locale: lang.code })
+		})
 	}
 
 	return (

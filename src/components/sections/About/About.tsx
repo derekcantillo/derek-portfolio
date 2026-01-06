@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { cn, IMAGES } from 'utils'
 import { Typography } from 'components/ui/Typography'
 import Image from 'next/image'
@@ -10,32 +11,33 @@ import {
 } from '@heroicons/react/24/solid'
 import { useDevice } from '@/hooks'
 
-const keyFacts = [
-	{
-		icon: PaintBrushIcon,
-		title: 'UX/UI Enthusiast',
-		description: 'I create clean and user-friendly interfaces.',
-		bgColor: 'bg-orange-50',
-		iconColor: 'text-orange-500'
-	},
-	{
-		icon: BoltIcon,
-		title: 'Performance',
-		description: 'Ultra fast websites.',
-		bgColor: 'bg-blue-50',
-		iconColor: 'text-blue-500'
-	},
-	{
-		icon: AcademicCapIcon,
-		title: 'Systems Engineer',
-		description: 'Universidad del Magdalena graduate with a solid foundation.',
-		bgColor: 'bg-green-50',
-		iconColor: 'text-green-500'
-	}
-]
-
 export const About = () => {
 	const { isMobile } = useDevice()
+	const t = useTranslations('about')
+
+	const keyFacts = [
+		{
+			icon: PaintBrushIcon,
+			title: t('keyFacts.ux.title'),
+			description: t('keyFacts.ux.description'),
+			bgColor: 'bg-orange-50',
+			iconColor: 'text-orange-500'
+		},
+		{
+			icon: BoltIcon,
+			title: t('keyFacts.performance.title'),
+			description: t('keyFacts.performance.description'),
+			bgColor: 'bg-blue-50',
+			iconColor: 'text-blue-500'
+		},
+		{
+			icon: AcademicCapIcon,
+			title: t('keyFacts.engineer.title'),
+			description: t('keyFacts.engineer.description'),
+			bgColor: 'bg-green-50',
+			iconColor: 'text-green-500'
+		}
+	]
 	return (
 		<section
 			data-scroll-section
@@ -54,7 +56,7 @@ export const About = () => {
 								font="clash-semibold"
 								className="text-xs tracking-wider uppercase md:text-sm lg:text-base"
 							>
-								SOBRE MÍ
+								{t('title')}
 							</Typography>
 
 							<Typography
@@ -62,7 +64,7 @@ export const About = () => {
 								font="clash-bold"
 								className="text-lg leading-tight md:text-3xl lg:text-4xl xl:text-5xl"
 							>
-								Más que código, creo experiencias que conectan.
+								{t('heading')}
 							</Typography>
 
 							<div className="space-y-3 md:space-y-4">
@@ -73,15 +75,7 @@ export const About = () => {
 										'text-center md:text-left'
 									)}
 								>
-									Ingeniero de sistemas con más de cuatro años de experiencia en
-									desarrollo frontend y enfoque fullstack, especializado en la
-									creación de aplicaciones web y móviles escalables y de alto
-									rendimiento. Trabajo principalmente con React, Next.js y React
-									Native, y he participado en proyectos backend con Node.js y
-									Python utilizando distintos frameworks. Me desenvuelvo en
-									entornos ágiles, colaborando con equipos multidisciplinarios,
-									con un fuerte enfoque en experiencia de usuario y comunicación
-									clara en inglés profesional.
+									{t('paragraphs.first')}
 								</Typography>
 
 								<Typography
@@ -91,11 +85,7 @@ export const About = () => {
 										'hidden text-center md:block md:text-left'
 									)}
 								>
-									Nací y crecí en el Caribe, una influencia que se refleja en la
-									pasión que llevo a cada proyecto. Combino la lógica
-									estructurada del backend con la creatividad del frontend para
-									construir productos digitales equilibrados, donde
-									funcionalidad, rendimiento y estética trabajan en conjunto.
+									{t('paragraphs.second')}
 								</Typography>
 							</div>
 						</div>
@@ -155,7 +145,7 @@ export const About = () => {
 								<div className="relative h-64 w-full sm:h-80 md:h-96 lg:h-full">
 									<Image
 										src={IMAGES.DEGREE_PHOTO}
-										alt="Derek bachelor's degree"
+										alt={t('images.degree')}
 										fill
 										className="object-cover"
 									/>
@@ -168,7 +158,7 @@ export const About = () => {
 								<div className="relative h-64 w-full sm:h-80 md:h-96 lg:h-full">
 									<Image
 										src={IMAGES.DEGREE_PHOTO_2}
-										alt="Universidad del Magdalena"
+										alt={t('images.university')}
 										fill
 										className="object-cover"
 									/>

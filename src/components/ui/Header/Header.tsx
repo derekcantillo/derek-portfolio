@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { cn } from '../../../utils/cn'
 import { Typography } from '../Typography'
 import { ThemeToggle } from '../ThemeToggle'
@@ -8,19 +9,19 @@ import { LanguageSelector } from '../LanguageSelector'
 import { MobileMenu } from '../MobileMenu'
 
 export const Header = () => {
+	const t = useTranslations('header.nav')
 	const [activeSection, setActiveSection] = useState('hero')
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 	const [isScrolled, setIsScrolled] = useState(false)
 
 	const sections = useMemo(
 		() => [
-			{ name: 'Inicio', href: '#hero', id: 'hero' },
-			{ name: 'Sobre mí', href: '#about', id: 'about' },
-			{ name: 'Trayectoria', href: '#experience', id: 'experience' },
-			{ name: 'Proyectos', href: '#projects', id: 'projects' }
-			// { name: 'Tecnologías', href: '#technologies', id: 'technologies' }
+			{ name: t('home'), href: '#hero', id: 'hero' },
+			{ name: t('about'), href: '#about', id: 'about' },
+			{ name: t('experience'), href: '#experience', id: 'experience' },
+			{ name: t('projects'), href: '#projects', id: 'projects' }
 		],
-		[]
+		[t]
 	)
 
 	// Handle scroll effect

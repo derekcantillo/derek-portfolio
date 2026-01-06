@@ -1,49 +1,46 @@
 'use client'
 
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { cn } from 'utils'
 import { Typography } from 'components/ui/Typography'
 import { ExperienceItem } from './components'
 
 export const Experience = () => {
+	const t = useTranslations('experience')
+
 	const experiences = [
 		{
-			company: 'Sofka technologies',
-			position: 'Consultor de Desarrollo',
-			location: 'Remoto',
-			period: 'Nov 2024 – presente',
-			description:
-				'Desarrollo frontend aplicando el patrón de microfrontends, con integración a backend mediante arquitectura de monorepos y enfoque en pruebas unitarias eficientes.',
-			stack:
-				'React, React Native, Next JS, Jest, Typescript, Tailwind, axios, azure devops'
+			company: t('experiences.0.company'),
+			position: t('experiences.0.position'),
+			location: t('experiences.0.location'),
+			period: t('experiences.0.period'),
+			description: t('experiences.0.description'),
+			stack: t('experiences.0.stack')
 		},
 		{
-			company: 'BTI Rebus Technology',
-			position: 'Frontend Dev Mid Sr',
-			location: 'Remoto',
-			period: 'Jul 2022 – Nov 2024',
-			description:
-				'Desarrollo de aplicaciones web y móviles con React, React Native y Next.js, optimizando rendimiento y adaptando soluciones a distintos contextos funcionales. Liderazgo técnico en equipos ágiles, gestión de despliegues en App Store y Google Play, y comunicación directa con clientes en inglés para asegurar entregas continuas de valor.',
-			stack:
-				'React, React Native, Next JS, Jest, Typescript, Tailwind, axios, Node JS, clickUp'
+			company: t('experiences.1.company'),
+			position: t('experiences.1.position'),
+			location: t('experiences.1.location'),
+			period: t('experiences.1.period'),
+			description: t('experiences.1.description'),
+			stack: t('experiences.1.stack')
 		},
 		{
-			company: 'INVEMAR',
-			position: 'Desarrollador Full stack',
-			location: 'Remoto',
-			period: 'Feb 2022 – Jul 2024',
-			description:
-				'Desarrollo full stack con React y Django Rest Framework, automatización de procesos con Python y experiencia avanzada en Oracle SQL. Implementación de web scraping con Beautiful Soup y Scrapy para recolección de datos, y colaboración con equipos multifuncionales en el levantamiento de requisitos y entrega de soluciones integradas.',
-			stack: 'React, python, django rest Framework, oracle SQL, fast API'
+			company: t('experiences.2.company'),
+			position: t('experiences.2.position'),
+			location: t('experiences.2.location'),
+			period: t('experiences.2.period'),
+			description: t('experiences.2.description'),
+			stack: t('experiences.2.stack')
 		},
 		{
-			company: 'Virtual Solutions',
-			position: 'Desarrollador Jr',
-			location: 'Remoto',
-			period: 'Ene 2021 – Feb 2022',
-			description:
-				'Implementación de microfrontends en proyectos frontend, con integración backend bajo arquitectura de monorepos. Desarrollo y optimización de pruebas unitarias para asegurar la calidad del software.',
-			stack: 'React, html, css, javascript, SASS, mySQL'
+			company: t('experiences.3.company'),
+			position: t('experiences.3.position'),
+			location: t('experiences.3.location'),
+			period: t('experiences.3.period'),
+			description: t('experiences.3.description'),
+			stack: t('experiences.3.stack')
 		}
 	]
 
@@ -58,13 +55,13 @@ export const Experience = () => {
 					variant="span"
 					className="text-accent mb-1 block text-xs font-semibold tracking-wider uppercase sm:mb-2 sm:text-sm"
 				>
-					MI CAMINO
+					{t('title')}
 				</Typography>
 				<Typography
 					variant="h2"
 					className="text-foreground text-2xl sm:text-3xl lg:text-4xl"
 				>
-					Trayectoria Profesional
+					{t('heading')}
 				</Typography>
 			</div>
 
