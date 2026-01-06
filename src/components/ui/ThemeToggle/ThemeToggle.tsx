@@ -59,7 +59,6 @@ export const ThemeToggle = () => {
 		)
 	}
 
-	// Determinar si está en modo oscuro (efectivo)
 	const isDark = effectiveTheme === 'dark'
 	const isSystem = theme === 'system'
 
@@ -68,7 +67,7 @@ export const ThemeToggle = () => {
 			onClick={handleToggle}
 			className={cn(
 				'relative inline-flex h-10 w-20 items-center rounded-full transition-all duration-300',
-				'border-foreground/10 border-2 backdrop-blur-sm',
+				'border-foreground/10 cursor-pointer border-2 backdrop-blur-sm',
 				isDark ? 'bg-dark/50' : 'bg-light/50'
 			)}
 			aria-label={`Current theme: ${theme}. Click to change.`}

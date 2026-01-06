@@ -7,6 +7,7 @@
 	--color-light: #eeeeee;
 	--color-dark: #121418;
 	--color-accent: #e7473c;
+	--color-accent-light: #d0bb95;
 
 	/* Base theme colors - default to light */
 	--background: var(--color-light);
@@ -18,6 +19,7 @@
 	--color-light: #eeeeee;
 	--color-dark: #121418;
 	--color-accent: #e7473c;
+	--color-accent-light: #d0bb95;
 
 	/* Base theme colors */
 	--color-background: var(--background);

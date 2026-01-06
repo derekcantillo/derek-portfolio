@@ -1,5 +1,5 @@
 export const IMAGES = {
-	PROFILE_PHOTO: '/assets/images/derek-photo.jpg',
+	PROFILE_PHOTO: '/assets/images/hero-photo.png',
 	DEGREE_PHOTO: '/assets/images/kiss_degree.jpg',
 	PLAY_CLOUT: '/assets/images/playclout.png',
 	SPOTIFY_CLONE: '/assets/images/spotifywebclone.png',
@@ -17,4 +17,8 @@ export const CONTACT_INFO = {
 		LINKEDIN: 'https://www.linkedin.com/in/derek-cantillo',
 		INSTAGRAM: 'https://www.instagram.com/dereskeree'
 	}
+}
+
+export const RESUME_INFO = {
+	URL: '/assets/documents/resume.pdf'
 }
