@@ -19,7 +19,7 @@ const getSystemTheme = (): 'light' | 'dark' => {
 export const useThemeStore = create<ThemeState>()(
 	persist(
 		(set, get) => ({
-			theme: 'system',
+			theme: 'light',
 			setTheme: (theme: Theme) => set({ theme }),
 			getEffectiveTheme: () => {
 				const { theme } = get()
