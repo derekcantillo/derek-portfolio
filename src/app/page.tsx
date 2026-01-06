@@ -1,5 +1,5 @@
-import { Hero, About, Projects, Experience, Contact } from 'components/sections'
-import { Header } from 'components/ui'
+import { Hero, About, Projects, Experience } from 'components/sections'
+import { Footer, Header } from 'components/ui'
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 			<About />
 			<Experience />
 			<Projects />
-			<Contact />
+			<Footer />
 		</main>
 	)
 }

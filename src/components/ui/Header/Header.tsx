@@ -17,8 +17,8 @@ export const Header = () => {
 			{ name: 'Inicio', href: '#hero', id: 'hero' },
 			{ name: 'Sobre mí', href: '#about', id: 'about' },
 			{ name: 'Trayectoria', href: '#experience', id: 'experience' },
-			{ name: 'Proyectos', href: '#projects', id: 'projects' },
-			{ name: 'Tecnologías', href: '#technologies', id: 'technologies' }
+			{ name: 'Proyectos', href: '#projects', id: 'projects' }
+			// { name: 'Tecnologías', href: '#technologies', id: 'technologies' }
 		],
 		[]
 	)
@@ -88,9 +88,8 @@ export const Header = () => {
 					>
 						<div
 							className={cn(
-								'flex h-10 w-10 items-center justify-center rounded-full',
-								'from-accent via-accent to-accent/80 bg-gradient-to-br',
-								'shadow-accent/40 hover:shadow-accent/50 shadow-lg transition-shadow hover:shadow-xl'
+								'flex items-center justify-center rounded-lg px-4',
+								'from-accent via-accent to-accent/80 bg-gradient-to-br'
 							)}
 						>
 							<Typography
@@ -99,7 +98,7 @@ export const Header = () => {
 								font="clash-bold"
 								className="text-light"
 							>
-								D
+								derek
 							</Typography>
 						</div>
 					</Link>

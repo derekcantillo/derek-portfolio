@@ -28,7 +28,7 @@ export const Contact = () => {
 		<section
 			data-scroll-section
 			id="contact"
-			className={cn('mt-20 bg-[#48cfcb] py-16 text-[#131313]')}
+			className={cn('mt-20 bg-amber-50 py-16 text-[#131313]')}
 		>
 			<div className={cn('container mx-auto')}>
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-2">

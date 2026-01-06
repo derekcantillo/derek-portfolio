@@ -39,7 +39,7 @@ export const Hero = () => {
 					imageSrc={IMAGES.PROFILE_PHOTO}
 					imageAlt="Derek's photo"
 					showExperienceBadge={true}
-					experienceYears="5+ Años"
+					experienceYears="4+ Años"
 					experienceLabel="Experiencia"
 				/>
 			</div>

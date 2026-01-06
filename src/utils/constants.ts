@@ -4,9 +4,10 @@ export const IMAGES = {
 	DEGREE_PHOTO_2: '/assets/images/degree.jpg',
 	PLAY_CLOUT: '/assets/images/playclout.png',
 	SPOTIFY_CLONE: '/assets/images/spotifywebclone.png',
-	DINERS_CLUB: '/assets/images/diners.jpg',
+	DINERS_CLUB: '/assets/images/diners.png',
 	MARVEL_APP: '/assets/images/marvel.jpg',
-	SIAM_EXPLORER: '/assets/images/siam-explorer.png'
+	SIAM_EXPLORER: '/assets/images/siam-explorer.png',
+	LIQUILEGAL: '/assets/images/liquilegal.png'
 }
 
 export const CONTACT_INFO = {
@@ -21,5 +22,5 @@ export const CONTACT_INFO = {
 }
 
 export const RESUME_INFO = {
-	URL: '/assets/documents/resume.pdf'
+	URL: '/assets/pdf/CV_DEREK_FRONTEND_ES.pdf'
 }

@@ -6,44 +6,41 @@ import { GlobeAltIcon } from '@heroicons/react/24/outline'
 export const Projects = () => {
 	const projects = [
 		{
+			title: 'Blu Diners Club',
+			description: 'Desarrollo de la app Blu Diners Club',
+			image: IMAGES.DINERS_CLUB,
+			link: 'https://play.google.com/store/apps/details?id=com.blu.de.diners.club'
+		},
+		{
 			title: 'Play Clout',
-			description: 'Description of project 1',
+			description: 'Desarrollo de Plataforma de Fantasy Esports',
 			image: IMAGES.PLAY_CLOUT,
 			link: 'https://playclout.gg/'
 		},
 		{
-			title: 'Diners Club',
-			description: 'Description of project 2',
-			image: IMAGES.DINERS_CLUB,
-			link: ''
+			title: 'Liquilegal',
+			description: 'Desarrollo de Plataforma de Legal',
+			image: IMAGES.LIQUILEGAL,
+			link: 'https://liquilegal.com'
 		},
-		// {
-		// 	title: 'Liquilegal',
-		// 	description: 'Description of project 3',
-		// 	image: 'path/to/image3.jpg',
-		// 	link: 'https://cloutfantasy.com',
-		// 	github: 'https://github.com/cloutfantasy'
-		// },
 		{
 			title: 'SIAM EXPLORER',
-			description: 'Description of project 3',
+			description: 'Participación en el proyecto SIAM Explorer del INVEMAR',
 			image: IMAGES.SIAM_EXPLORER,
 			link: 'https://siamexplorer.invemar.org.co/'
 		},
 		{
 			title: 'Spotify Clone',
-			description: 'Description of project 3',
+			description: 'Clon de la app Spotify',
 			image: IMAGES.SPOTIFY_CLONE,
-			link: 'https://spotifyclone.com',
-			github:
-				'https://play-lh.googleusercontent.com/kDXJ6XA2Cm47lzDCvvu6HNCu0PWmTwZKiY0ldCWrCgXGT3Ms-lbP_WN1v5vknspnLT15=w526-h296-rw'
+			link: 'https://derekcantillo.github.io/Spotify-Web-Clone/',
+			github: 'https://github.com/derekcantillo/Spotify-Web-Clone'
 		},
 		{
 			title: 'Marvel App',
-			description: 'Description of project 3',
+			description: 'Desarrollo de la app Marvel',
 			image: IMAGES.MARVEL_APP,
-			link: 'https://marvelapp.com',
-			github: ''
+			github: 'https://github.com/derekcantillo/marvel-app'
 		}
 	]
 
@@ -56,9 +53,20 @@ export const Projects = () => {
 			)}
 		>
 			<div className="w-full">
-				<Typography variant="h2" className="mb-12 text-center">
-					Projects
-				</Typography>
+				<div className="container mx-auto mb-10 text-left sm:mb-12 lg:mb-20">
+					<Typography
+						variant="span"
+						className="text-accent mb-1 block text-xs font-semibold tracking-wider uppercase sm:mb-2 sm:text-sm"
+					>
+						Portafolio
+					</Typography>
+					<Typography
+						variant="h2"
+						className="text-foreground text-2xl sm:text-3xl lg:text-4xl"
+					>
+						Proyectos destacados
+					</Typography>
+				</div>
 				<div className="flex flex-wrap">
 					{projects.map((project, index) => {
 						// Calculate row number (0-indexed)
@@ -82,18 +90,21 @@ export const Projects = () => {
 						return (
 							<div
 								key={project.title}
-								className={`${widthClass} h-[30rem] p-3`}
+								className={cn(`${widthClass} h-[25rem] p-3`)}
 							>
 								<div
-									className="group relative h-full w-full overflow-hidden"
+									className="group relative h-full w-full overflow-hidden rounded-xl"
 									style={{
 										backgroundImage: `url(${project.image})`,
 										backgroundSize: 'cover',
 										backgroundPosition: 'center'
 									}}
 								>
-									{/* Overlay on hover */}
-									<div className="bg-accent absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-75">
+									<div
+										className={cn(
+											'bg-accent absolute inset-0 flex items-center justify-center rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-75'
+										)}
+									>
 										<div className="flex gap-4">
 											{project.github && (
 												<a
@@ -113,14 +124,16 @@ export const Projects = () => {
 													</svg>
 												</a>
 											)}
-											<a
-												href={project.link}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="bg-light rounded-full p-3 text-black transition-all hover:bg-gray-200"
-											>
-												<GlobeAltIcon className="h-6 w-6" />
-											</a>
+											{project.link && (
+												<a
+													href={project.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="bg-light rounded-full p-3 text-black transition-all hover:bg-gray-200"
+												>
+													<GlobeAltIcon className="h-6 w-6" />
+												</a>
+											)}
 										</div>
 									</div>
 
