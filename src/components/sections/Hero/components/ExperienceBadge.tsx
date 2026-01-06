@@ -30,15 +30,15 @@ export const ExperienceBadge = ({
 				rotate: [0, -2, 2, -2, 0],
 				transition: { duration: 0.3 }
 			}}
-			className={`absolute -right-4 -bottom-4 z-10 rounded-2xl bg-white p-4 shadow-xl ${className}`}
+			className={`absolute -right-2 -bottom-2 z-10 rounded-xl bg-white p-2.5 shadow-xl sm:-right-3 sm:-bottom-3 sm:rounded-2xl sm:p-3 md:p-4 ${className}`}
 		>
-			<div className="flex items-center gap-3">
+			<div className="flex items-center gap-2 sm:gap-2.5 md:gap-3">
 				<motion.div
 					whileHover={{ rotate: 360 }}
 					transition={{ duration: 0.6 }}
-					className="bg-accent/10 rounded-lg p-3"
+					className="bg-accent/10 rounded-lg p-2 sm:p-2.5 md:p-3"
 				>
-					<RocketLaunchIcon className="text-accent h-6 w-6" />
+					<RocketLaunchIcon className="text-accent h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
 				</motion.div>
 				<div>
 					<Typography
@@ -47,7 +47,7 @@ export const ExperienceBadge = ({
 						font="clash-regular"
 						className="text-gray-600"
 					>
-						{label}
+						<span className="text-[10px] sm:text-xs">{label}</span>
 					</Typography>
 					<Typography
 						variant="p"
@@ -55,7 +55,9 @@ export const ExperienceBadge = ({
 						font="clash-semibold"
 						className="text-dark"
 					>
-						{years}
+						<span className="text-sm sm:text-base md:text-lg">
+							{years}
+						</span>
 					</Typography>
 				</div>
 			</div>

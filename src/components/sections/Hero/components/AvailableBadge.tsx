@@ -19,11 +19,11 @@ export const AvailableBadge = ({
 				duration: 0.5,
 				ease: [0.25, 0.1, 0.25, 1]
 			}}
-			className={`bg-accent/10 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 ${className}`}
+			className={`bg-accent/10 inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 ${className}`}
 		>
-			<span className="relative flex h-3 w-3">
+			<span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
 				<span className="bg-accent absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
-				<span className="bg-accent relative inline-flex h-3 w-3 rounded-full"></span>
+				<span className="bg-accent relative inline-flex h-2.5 w-2.5 rounded-full sm:h-3 sm:w-3"></span>
 			</span>
 			<Typography
 				variant="span"
@@ -31,7 +31,7 @@ export const AvailableBadge = ({
 				font="clash-medium"
 				className="text-accent"
 			>
-				{text}
+				<span className="text-xs sm:text-sm">{text}</span>
 			</Typography>
 		</motion.div>
 	)

@@ -16,12 +16,12 @@ export const Hero = () => {
 			data-scroll-section
 			id="hero"
 			className={cn(
-				'container mx-auto flex min-h-screen items-center justify-center'
+				'container mx-auto flex min-h-screen items-center justify-center px-4 py-12 md:px-6 lg:px-8'
 			)}
 		>
 			<div
 				className={cn(
-					'flex w-full flex-row items-center justify-between gap-8'
+					'flex w-full flex-col-reverse items-center justify-between gap-8 md:gap-12 lg:flex-row lg:gap-30'
 				)}
 			>
 				<HeroContent
@@ -31,6 +31,8 @@ export const Hero = () => {
 					contactEmail={CONTACT_INFO.EMAIL}
 					resumeUrl={RESUME_INFO.URL}
 					showAvailableBadge={true}
+					githubUrl={CONTACT_INFO.SOCIAL.GITHUB}
+					linkedinUrl={CONTACT_INFO.SOCIAL.LINKEDIN}
 				/>
 
 				<HeroImage

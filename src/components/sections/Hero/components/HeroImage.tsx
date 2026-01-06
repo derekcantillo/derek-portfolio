@@ -28,7 +28,7 @@ export const HeroImage = ({
 				delay: 0.3,
 				ease: [0.25, 0.1, 0.25, 1]
 			}}
-			className="relative aspect-square w-full max-w-md"
+			className="relative aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-md"
 		>
 			<BlobBackground />
 
@@ -41,7 +41,7 @@ export const HeroImage = ({
 					src={imageSrc}
 					alt={imageAlt}
 					fill
-					className="rounded-full border-10 border-white object-cover shadow-lg"
+					className="rounded-full border-8 border-white object-cover shadow-lg md:border-10"
 					priority
 				/>
 			</motion.div>
