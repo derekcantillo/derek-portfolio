@@ -1,19 +1,21 @@
 'use client'
 import React from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { cn, IMAGES, CONTACT_INFO, RESUME_INFO } from 'utils'
 import { HeroContent, HeroImage } from './components'
 
 export const Hero = () => {
 	const t = useTranslations('hero')
+	const locale = useLocale()
 
-	// Convert roles object to array
 	const roles = Object.values({
 		0: t('roles.0'),
 		1: t('roles.1'),
 		2: t('roles.2'),
 		3: t('roles.3')
 	})
+
+	const resumeUrl = locale === 'en' ? RESUME_INFO.CV_EN : RESUME_INFO.CV_ES
 
 	return (
 		<section
@@ -33,7 +35,7 @@ export const Hero = () => {
 					roles={roles}
 					availableText={t('availableText')}
 					contactEmail={CONTACT_INFO.EMAIL}
-					resumeUrl={RESUME_INFO.URL}
+					resumeUrl={resumeUrl}
 					showAvailableBadge={true}
 					githubUrl={CONTACT_INFO.SOCIAL.GITHUB}
 					linkedinUrl={CONTACT_INFO.SOCIAL.LINKEDIN}

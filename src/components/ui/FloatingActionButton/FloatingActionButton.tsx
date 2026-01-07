@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
 	ChatBubbleLeftRightIcon,
@@ -63,8 +63,11 @@ const menuItemVariants = {
 
 export const FloatingActionButton = () => {
 	const t = useTranslations('hero')
+	const locale = useLocale()
 	const [isVisible, setIsVisible] = useState(false)
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	const resumeUrl = locale === 'en' ? RESUME_INFO.CV_EN : RESUME_INFO.CV_ES
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -130,7 +133,7 @@ export const FloatingActionButton = () => {
 								</motion.button>
 
 								<motion.a
-									href={RESUME_INFO.URL}
+									href={resumeUrl}
 									target="_blank"
 									rel="noopener noreferrer"
 									download

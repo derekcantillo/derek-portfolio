@@ -22,5 +22,6 @@ export const CONTACT_INFO = {
 }
 
 export const RESUME_INFO = {
-	URL: '/assets/pdf/CV_DEREK_FRONTEND_ES.pdf'
+	CV_ES: '/assets/pdf/Derek_Cantillo_Desarrollador_Frontend_ES.pdf',
+	CV_EN: '/assets/pdf/Derek_Cantillo_Frontend_Developer_EN.pdf'
 }
