@@ -22,7 +22,7 @@ interface LanguageSelectorProps {
 
 export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 	const [isOpen, setIsOpen] = useState(false)
-	const [isPending, startTransition] = useTransition()
+	const [, startTransition] = useTransition()
 	const locale = useLocale()
 	const router = useRouter()
 	const pathname = usePathname()
@@ -59,7 +59,7 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 				className={cn(
 					'flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-200',
 					'hover:bg-accent/10 active:bg-accent/20 cursor-pointer',
-					'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent'
+					'focus-visible:ring-accent focus-visible:ring-2 focus-visible:outline-none'
 				)}
 				aria-label="Select language"
 				aria-expanded={isOpen}
@@ -94,9 +94,9 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 			{isOpen && (
 				<div
 					className={cn(
-						'absolute right-0 top-full mt-2 w-40 overflow-hidden rounded-xl',
-						'bg-[#eeeeee] dark:bg-[#121418] border-2 border-gray-200 dark:border-gray-700',
-						'shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200'
+						'absolute top-full right-0 mt-2 w-40 overflow-hidden rounded-xl',
+						'border-2 border-gray-200 bg-[#eeeeee] dark:border-gray-700 dark:bg-[#121418]',
+						'animate-in fade-in slide-in-from-top-2 shadow-2xl duration-200'
 					)}
 				>
 					{languages.map(language => (
@@ -115,7 +115,11 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 							<Typography
 								variant="span"
 								size="sm"
-								font={currentLanguage.code === language.code ? 'clash-semibold' : 'clash-medium'}
+								font={
+									currentLanguage.code === language.code
+										? 'clash-semibold'
+										: 'clash-medium'
+								}
 								className={cn(
 									currentLanguage.code === language.code && 'text-accent'
 								)}
@@ -124,7 +128,7 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 							</Typography>
 							{currentLanguage.code === language.code && (
 								<svg
-									className="ml-auto h-4 w-4 text-accent"
+									className="text-accent ml-auto h-4 w-4"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 								>
@@ -142,4 +146,3 @@ export const LanguageSelector = ({ className }: LanguageSelectorProps) => {
 		</div>
 	)
 }
-

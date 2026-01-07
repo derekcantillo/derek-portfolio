@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-	title: 'Derek Cantillo - Frontend Developer',
+	title: 'Derek Cantillo',
 	description:
-		'Portfolio de Derek Cantillo, Frontend Developer e Ingeniero de Sistemas'
+		'Portfolio de Derek Cantillo, Software Developer e Ingeniero de Sistemas'
 }
 
 export function generateStaticParams() {
@@ -36,8 +36,7 @@ export default async function LocaleLayout({
 }) {
 	const { locale } = await params
 
-	// Ensure that the incoming `locale` is valid
-	if (!routing.locales.includes(locale as any)) {
+	if (!routing.locales.includes(locale as 'es' | 'en')) {
 		notFound()
 	}
 
@@ -57,4 +56,3 @@ export default async function LocaleLayout({
 		</html>
 	)
 }
-
